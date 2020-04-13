@@ -8,7 +8,7 @@ do
    {
     h = get_int("Height: ");         //h marks the height of pyramid
    }    
-while (h>8 || h<0 || h==0);
+while (h>8 || h<=0);
 
 for (int i=1; i<=h;i++) 
     {
