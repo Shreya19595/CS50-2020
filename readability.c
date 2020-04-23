@@ -12,7 +12,7 @@ int main(void)
     int sentence = 0;
     int letter = 0;
         
-    for (int i = 0; text[i]!='\0'; i++)
+    for (int i = 0; text[i] != '\0'; i++)
     {
 
         
@@ -21,12 +21,12 @@ int main(void)
             letter++;
         }
         
-        if (text[i]== ' ' && text[i+1]!='\0')                                                         //count of word
+        if (text[i] == ' ' && text[i + 1] != '\0')                                                   //count of word
         {
             word++;
         }
         
-        if (text[i]== '.' || text[i]=='!' || text[i]=='?')                                            //count of sentences
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')                                           //count of sentences
         {
             sentence++;
         }
