@@ -31,12 +31,12 @@ int main(int argc ,string argv[])
             {
                 if (isupper(plain[i]) && plain[i] >= 'A' && plain[i] <= 'Z')
                 {
-                    printf("%c", (((plain[i] + k) - 65) % 26) + 65);
+                    printf("%c", ((plain[i] + k) % 26));
                 }
                 
                 if (islower(plain[i]) && plain[i] >= 'a' && plain[i] <= 'z')
                 {
-                    printf("%c", (((plain[i] + k) - 97) % 26) + 97);
+                    printf("%c", ((plain[i] + k) % 26));
                 }
             }
             else
