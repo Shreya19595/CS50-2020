@@ -7,21 +7,23 @@
 int main(int argc ,string argv[])
 {
 
-    int k = atoi(argv[1]);
+
         
-    if (argc != 2 || k < 0 || k == 0)
+    if (argc != 2)
     {
         printf ("Usage: ./caesar key\n");
         return 1;
     }
     
-    if (k < 0 && k == 0)
+    int k = atoi(argv[1]);
+       
+    if (k <= 0)
     {
         printf ("Usage: ./caesar key\n");
         return 1;
     }
     
-    if (k>0)
+    if (k > 0)
     {
         string plain = get_string ("plaintext:  ");
         printf ("ciphertext: ");
@@ -45,11 +47,10 @@ int main(int argc ,string argv[])
             {
                 printf("%c", plain [i]);
             }
-            
-            
         }
-        printf ("\n");
-        return 0;
     }
+    
+    printf ("\n");
+    return 0;
 
 }
