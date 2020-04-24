@@ -9,7 +9,7 @@ int main(int argc ,string argv[])
 
     int k = atoi(argv[1]);
         
-    if (argc != 2 || k <= 0)
+    if (argc != 2 || k < 0 || k == 0)
     {
         printf ("Usage: ./caesar key\n");
         return 1;
