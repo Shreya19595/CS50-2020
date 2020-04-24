@@ -20,9 +20,8 @@ int main(int argc ,string argv[])
         
         for (int i = 0; i <=(strlen(plain)); i++)
         {
-            
-                    
-            if (isalpha(plain[i]))
+
+            if (isalpha(plain[i]) == true)
             {
                 if (isupper(plain[i]) && plain[i] >= 'A' && plain[i] <= 'Z')
                 {
@@ -43,6 +42,12 @@ int main(int argc ,string argv[])
         }
         printf ("\n");
         return 0;
+    }
+    
+    else
+    {
+        printf ("Usage: ./caesar key\n");
+        return 1;
     }
 
 }
