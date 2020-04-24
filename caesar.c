@@ -15,8 +15,8 @@ int main(int argc ,string argv[])
 
     if (k>0)
     {
-        string plain = get_string ("Plaintext: ");
-        printf ("Ciphertext: ");
+        string plain = get_string ("plaintext: ");
+        printf ("ciphertext: ");
         
         for (int i = 0; i <=(strlen(plain)); i++)
         {
