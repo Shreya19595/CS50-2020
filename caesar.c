@@ -12,7 +12,13 @@ int main(int argc ,string argv[])
         return 1;
     }
     int k = atoi(argv[1]);
-
+    
+    if (k == 0 || k < 0)
+    {
+        printf ("Usage: ./caesar key\n");
+        return 1;
+    }
+    
     if (k>0)
     {
         string plain = get_string ("plaintext:  ");
@@ -42,12 +48,6 @@ int main(int argc ,string argv[])
         }
         printf ("\n");
         return 0;
-    }
-    
-    else
-    {
-        printf ("Usage: ./caesar key\n");
-        return 1;
     }
 
 }
