@@ -45,9 +45,4 @@ int main(int argc ,string argv[])
         return 0;
     }
 
-    else
-    {
-        printf ("Usage: ./caesar key\n");
-        return 1;
-    }
 }
