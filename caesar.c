@@ -12,7 +12,8 @@ int main(int argc ,string argv[])
         return 1;
     }
     
-    int k = atoi(argv[1]);    
+    int k = atoi(argv[1]);   
+    printf("key: %i, %i", k, argc);
     if (k == 0)
     {
         printf ("Usage: ./caesar key\n");
