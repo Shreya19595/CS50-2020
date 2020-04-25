@@ -15,16 +15,12 @@ int main(int argc ,string argv[])
         return 1;
     }
 
-    
-
-    else
+    if (k <= 0)
     {
-        if (k <= 0)
-        {
-            printf ("Usage: ./caesar key\n");
-            return 1;
-        }
+        printf ("Usage: ./caesar key\n");
+        return 1;
     }
+    
 
     if (k > 0)
     {
