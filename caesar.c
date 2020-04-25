@@ -19,7 +19,7 @@ int main(int argc ,string argv[])
        
     if (k <= 0)
     {
-        printf ("Usage: ./caesar key\n");
+        printf ("Usage: ./caesar key");
         return 1;
     }
     
