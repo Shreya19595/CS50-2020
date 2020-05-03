@@ -128,30 +128,18 @@ int main(int argc, string argv[])
 }
 
 // Record preference if vote is valid
-//passed i,j and name of the candidate the user entered, look at line 77
 bool vote(int voter, int rank, string name)
 {
-    bool exist = false;
     for (int i = 0; i < candidate_count; i++)
     {
-        //check if name is present in the candidates entered by the user by camparing two strings 
-        //strcmp is checking for the name and camparing it to the candidates array location 'i' which starts according to the for loop above 
         if (strcmp(name, candidates[i].name) == 0)
         {
-            //if you found the person is present then add that number as a rank of the candidate in the preferences array
-            //suppose this is a 2d array and the preference array is adding the preference number on a specific poistion so 
-            // here ex - preferences[0][0] = i (the rank preferences from the candidate count) 
-            // [i][][][]
-            // [][][][]
-            // [][][][]
-            // [][][][]
             preferences[voter][rank] = i;
-            exist = true;
+            return true;
             break;
-            //This is a bool conditions which will become true, again look at line 77 
         }
     }
-    return exist;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
