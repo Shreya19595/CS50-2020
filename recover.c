@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
             break;
         }
 
-        // check if we found a JPEG
+        // checking if we found a JPEG
         bool containsJpegHeader = buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0;
 
-        // if we found a yet another JPEG, we must close the previous file
+        // closing the previous file
         if (containsJpegHeader && outptr != NULL)
         {
             fclose(outptr);
