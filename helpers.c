@@ -9,7 +9,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            average = round ((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3.000);
+            //averaging the 3 color values
+            average = round((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.000);
             image[i][j].rgbtRed = image[i][j].rgbtGreen = image[i][j].rgbtBlue = average;
         }
     }
@@ -23,10 +24,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            //using the formula to determine the sepia values
             float sepiaRed = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
             float sepiaGreen = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
             float sepiaBlue = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
             
+            //checking if the colour value is greater than 255 and assigning the correct value
             if (round(sepiaRed) <= 255)
             {
                 image[i][j].rgbtRed = round(sepiaRed);
@@ -63,8 +66,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int temp[3];
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width/2; j++)
+        for (int j = 0; j < width / 2; j++)
         {
+            //storing value in temp array and then swapping the values
             temp[0] = image[i][j].rgbtRed;
             temp[1] = image[i][j].rgbtGreen;
             temp[2] = image[i][j].rgbtBlue;
