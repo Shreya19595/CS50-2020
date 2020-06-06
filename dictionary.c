@@ -21,7 +21,7 @@ node *remove_node(node *ptr);
 node *add_node(node *ptr, char *word);
 
 //size of each word
-const unsigned int M = 30;
+const unsigned int M = 100;
 
 // Number of buckets in hash table
 const unsigned int N = 200000;
