@@ -13,7 +13,7 @@ def main():
 
         print(" " * numspace, end = "")
         print("#" * numhash, end = "")
-        print(" ", end = "")
+        print("  ", end = "")
         print("#" * numhash)
 
 if __name__ == "__main__":
