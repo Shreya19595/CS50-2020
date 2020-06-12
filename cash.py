@@ -8,13 +8,17 @@ def main():
             break
 
     dollar = round(change * 100)
-    cents = dollar / 25
+
+    quarters = int(dollar / 25)
     left1 = dollar % 25
 
-    dimes = left1 / 10
+    dimes = int(left1 / 10)
     left2 = left1 % 10
 
-    count = int(cents) + int(dimes) + int(left2)
+    nickels = int(left2 / 5)
+    left3 = left2 % 5
+
+    count = int(quarters) + int(dimes) + int(nickels) + int(left3)
 
     print(count)
 
