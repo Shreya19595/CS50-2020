@@ -30,7 +30,7 @@ def main():
     i = int(number)
     if (total % 10 == 0):
         if (i >= 340000000000000 and i < 350000000000000) or (i >= 370000000000000 and i < 380000000000000):
-            print("AMERICAN EXPRESS")
+            print("AMEX")
         elif i >= 5100000000000000 and i < 5600000000000000:
             print("MASTERCARD")
         elif (i >= 4000000000000 and i < 5000000000000) or (i >= 4000000000000000 and i < 5000000000000000):
