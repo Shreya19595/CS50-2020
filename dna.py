@@ -7,7 +7,10 @@ def max_num(s, sub):
 
     for i in range((len(s)-len(sub)), -1, -1):
         if s[i : i + len(sub)] == sub:
-            ans[i] = 1 + ans[i + len(sub)]
+            if (i + len(sub) > len(s) - 1):
+                ans[i] = 1
+            else:
+                ans[i] = 1 + ans[i + len(sub)]
     return max(ans)
 
 def match(reader, actual):
